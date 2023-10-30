@@ -1,0 +1,91 @@
+﻿@model Staff
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Views/Management/Main.cshtml";
+}
+
+<div class="container mt-5">
+    <h1>Add Staff</h1>
+
+    <div>
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <form asp-controller="Management" asp-action="AddStaff" method="post" class="mt-3">
+            <div style="margin-top:7px" class="form-group row">
+                <label asp-for="FirstName" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+
+                    <input asp-for="FirstName" class="form-control" placeholder="First Name">
+                </div>
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div style="margin-top:7px" class="form-group row">
+                <label asp-for="LastName" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input asp-for="LastName" class="form-control" placeholder="Last Name">
+                </div>
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div style="margin-top:7px" class="form-group row">
+                <label asp-for="Role" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <select asp-for="Role" class="form-control">
+                        <option value="Staff">Staff</option>
+                        <option value="Manager">Manager</option>
+                    </select>
+                </div>
+                <span asp-validation-for="Role" class="text-danger"></span>
+            </div>
+            <div style="margin-top:7px" class="form-group row">
+                <label asp-for="Address" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input asp-for="Address" class="form-control" placeholder="Address">
+                </div>
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div style="margin-top:7px" class="form-group row">
+                <label asp-for="Username" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input asp-for="Username" class="form-control" placeholder="Username">
+                </div>
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            <div style="margin-top:7px" class="form-group row">
+                <label asp-for="Password" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input asp-for="Password" class="form-control" placeholder="Password">
+                </div>
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div style="margin-top: 7px" class="form-group row">
+                <label asp-for="Gender" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <select asp-for="Gender" class="form-control">
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+            <div style="margin-top:7px" class="form-group row">
+                <label asp-for="PhoneNumber" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input asp-for="PhoneNumber" class="form-control" placeholder="PhoneNumber">
+                </div>
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div style="margin-top:7px" class="form-group row">
+                <label asp-for="startWorkTime" class="col-sm-2 col-form-label">Start Working Time</label>
+                <div class="col-sm-10">
+                    <input asp-for="startWorkTime" class="form-control" placeholder="startWorkTime">
+                </div>
+                <span asp-validation-for="startWorkTime" class="text-danger"></span>
+            </div>
+            <div style="margin-top:10px" class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-success">Create</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
